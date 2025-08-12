@@ -32,4 +32,4 @@ The process involved three main steps:
 
 Success in ML heavily depends on knowing what methods exist for your problem type. Implementation becomes straightforward once you understand your options. Following this tutorial gave me the blueprint, but for future competitions, I need to develop intuition for choosing approaches independently.
 
-[See my competition notebook here](your-notebook-link)
+[See my competition notebook here]([your-notebook-link](https://www.kaggle.com/code/kylimcqueen/housepricesadvancedregression00))
