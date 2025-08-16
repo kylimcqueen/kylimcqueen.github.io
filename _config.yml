@@ -21,4 +21,4 @@ navbar:
  - name: "About"
    link: "about"
  - name: "Index"
-   absolute-link: /
+   absolute-link: /index.html
