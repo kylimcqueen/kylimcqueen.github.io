@@ -5,7 +5,6 @@ subtitle: My plan to stay on track
 tags: [kaggle]
 ---
 
-# A workflow for my second Kaggle competition
 
 *August 15, 2025*
 
