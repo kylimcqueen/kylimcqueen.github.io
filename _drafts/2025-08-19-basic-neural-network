@@ -51,7 +51,36 @@ with PyTorch commands, convert the given dataset from whatever form it’s curre
   value of the first tuple, but it was a very, very long tensor, so I only included the shape in the final code. 
   🔍 However, I did print the second tuple value. The target is the handwritten number represented by the image.
 
+***add image
 
+## 3. Create the neural network class 
+
+* The constructor (‘__init__’) sets up the network’s architecture. This means instead of creating the class like a blank
+slate, I initialize specific properties of the nn module. 
+* Instantiate a flatten layer to convert multidimensional image data into a 1D array. I will use the ‘self.flatten’ 
+attribute to create the input layer.
+* Create a 'Sequential' object and assign it to the attribute 'linear_relu_stack'. The 'Sequential' object consists of
+the layers of the neural network.
+  🔍 The first layer is a hidden linear layer (I haven’t forgotten the input layer - I will come back to that in a
+  few code lines). A linear layer is a layer that performs a linear transformation on the data it receives. As discussed
+  in 3Blue1Brown’s video, this means multiplying the input by a weight and adding a bias. The second linear layer is also
+  a hidden layer, and the third linear layer is an output layer, which is why its ‘out_features’ value is 10. Recall that this
+  neural network aims to predict one out of 10 possible digits.
+    🔧 The ‘in_features’ parameter is the size of the input sample. The input data is an image that is 28*28 pixels, so
+    I must need 28*28 neurons in the input layer.
+    🔧 The 'out_features' parameter is the number of neurons in the next layer. It’s common to use numbers that are powers 
+    of 2 for hidden layers for computational efficiency and memory. 512 is a common starting point, as 2^9=512.
+    🔧 [ReLU](https://www.datacamp.com/blog/rectified-linear-unit-relu), which stands for Rectified Linear Unit, is 
+    not a layer itself. It is an activation function applied to the output of each layer. It allows the neural network to
+    model non-linear relationships in the data. 
+  🔍 Create the forward method to carry out the neural network processes.
+    🔧 Use PyTorch’s 'transform' method to transform the input data into the flattened input layer.
+    🔧 Send the data through the neural network and assign the value to the variable logits. Logits are the name for the
+    model’s raw “confidence score” for a specific output. A higher logit number represents a higher confidence by the model
+    that the output belongs to a certain class. So, if the first logit score is the highest, the model is most confident that
+    the digit in the image is a 0.
+
+***add image
 
 
 
