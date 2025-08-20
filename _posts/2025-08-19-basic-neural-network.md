@@ -75,6 +75,7 @@ slate, I initialize specific properties of the nn module.
 attribute to create the input layer.
 * Create a 'Sequential' object and assign it to the attribute 'linear_relu_stack'. The 'Sequential' object consists of
 the layers of the neural network.
+
   🔍 The first layer is a hidden linear layer (I haven’t forgotten the input layer - I will come back to that in a
   few code lines). A linear layer is a layer that performs a linear transformation on the data it receives. As discussed
   in 3Blue1Brown’s video, this means multiplying the input by a weight and adding a bias. The second linear layer is also
