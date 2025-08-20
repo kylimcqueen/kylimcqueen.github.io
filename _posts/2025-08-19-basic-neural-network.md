@@ -82,7 +82,7 @@ the layers of the neural network.
   a hidden layer, and the third linear layer is an output layer, which is why its ‘out_features’ value is 10. Recall that this
   neural network aims to predict one out of 10 possible digits.
   
-    🔧 The ‘in_features’ parameter is the size of the input sample. The input data is an image that is 28*28 pixels, so
+      🔧 The ‘in_features’ parameter is the size of the input sample. The input data is an image that is 28*28 pixels, so
     I must need 28*28 neurons in the input layer.
   
     🔧 The 'out_features' parameter is the number of neurons in the next layer. It’s common to use numbers that are powers 
