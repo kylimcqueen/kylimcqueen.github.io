@@ -94,7 +94,7 @@ the layers of the neural network.
     that the output belongs to a certain class. So, if the first logit score is the highest, the model is most confident that
     the digit in the image is a 0.
 
-***add image
+![Create nn class](assets/nn-create-nn-class.jpg)
 
 ## 4. Create the preprocessing and loading pipeline
 
@@ -110,6 +110,11 @@ I should batch them using ‘DataLoader’ and send them to the neural network i
   label, and then average the differences between prediction and targets for all 64 data points in that batch. With that 
   information, the neural network can update its weights to produce better predictions for the next batch.
   🔍 Outputs are a batch of 64 images in the same format - ‘(data, target)’.
+
+![Create preprocessing/loading pipeline](assets/nn-pipeline.jpg)
+
+## 5. Run the neural network
+
 * The strength of a GPU over a CPU is its ability to carry out parallel processing. They are useful for processing large 
 datasets more efficiently than CPUs. If you’re using Google Colab like me, the default processor is a CPU. But you can click
 the dropdown next to Runtime in the top right, then click “Change runtime type” to change the Runtime to “T4 GPU”.
@@ -126,7 +131,7 @@ the dropdown next to Runtime in the top right, then click “Change runtime type
   🔍 I would recommend putting a break statement after the last print statement the first time you run the code to make 
   sure it runs smoothly before trying to run all 60000 samples. 
 
-***add image
+![Run neural network](assets/nn-run-nn.jpg)
 
 After running the code block, look at the “Predicted digit for first image” vs “Actual digit for first image”. Are they 
 congruent? Mine aren’t. The model needs to be trained. This means that it needs to compare its predictions to the targets.
