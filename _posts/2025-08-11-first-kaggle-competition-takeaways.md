@@ -5,8 +5,6 @@ subtitle: "What I learned from my first machine learning competition"
 tags: ["kaggle"]
 ---
 
-# First Kaggle Competition Takeaways
-
 *August 11, 2025*
 
 I completed my first Kaggle competition using Ryan's 3-hour [tutorial](https://www.youtube.com/watch?v=UqmulHG4IvY&t=10268s) from [Ryan and Matt Data Science](https://www.youtube.com/@RyanAndMattDataScience). While long, it's invaluable for beginners like me.
