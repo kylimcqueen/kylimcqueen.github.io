@@ -34,13 +34,23 @@ dataset and predicts the handwritten number present in each image.
 * ‘DataLoader’ handles batching for efficiency and memory management.
 * ‘Datasets’ gives access to built-in datasets like MNIST
 
+![Import libraries code](assets/nn-imports.jpg)
+
 ## 2. Explore the dataset
+
 * The tensor is the fundamental data structure in Pytorch. They are analogous to arrays in numpy. Before moving forward 
 with PyTorch commands, convert the given dataset from whatever form it’s currently in into a tensor.
 * There are 60,000 samples in the dataset. 
 * Determine the format of data in the dataset. 
   🔍 Using the ‘type()’ command tells me that the first item in the dataset is a tuple. Most Pytorch datasets have data
   stored in a tuple with the pattern ‘(data, target)’. I see that it’s a tuple of length 2.
+  🔍 The ‘.shape’ attribute tells me the dimensions of the data. If the data is in the form ‘(data, target)’ and I know I'm
+  looking for image data, I can expect the first value in the tuple to have multiple dimensions. I see that the shape of the
+  first value in the tuple is [1, 28, 28]. PyTorch tensor format represents images as 
+  [number of channels, image height in pixels, image width in pixels]. That looks like image data! I originally printed the
+  value of the first tuple, but it was a very, very long tensor, so I only included the shape in the final code. 
+  🔍 However, I did print the second tuple value. The target is the handwritten number represented by the image.
+
 
 
 
