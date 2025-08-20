@@ -41,7 +41,7 @@ dataset and predicts the handwritten number present in each image.
 * The tensor is the fundamental data structure in Pytorch. They are analogous to arrays in numpy. Before moving forward 
 with PyTorch commands, convert the given dataset from whatever form it’s currently in into a tensor.
 
-![Load dataset](assets/nn-explore-dataset-01.jpg)
+![Load dataset](/assets/nn-explore-dataset-01.jpg)
 
 * There are 60,000 samples in the dataset. 
 
