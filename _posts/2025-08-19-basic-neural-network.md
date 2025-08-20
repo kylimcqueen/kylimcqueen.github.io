@@ -81,15 +81,21 @@ the layers of the neural network.
   in 3Blue1Brown’s video, this means multiplying the input by a weight and adding a bias. The second linear layer is also
   a hidden layer, and the third linear layer is an output layer, which is why its ‘out_features’ value is 10. Recall that this
   neural network aims to predict one out of 10 possible digits.
+  
     🔧 The ‘in_features’ parameter is the size of the input sample. The input data is an image that is 28*28 pixels, so
     I must need 28*28 neurons in the input layer.
+  
     🔧 The 'out_features' parameter is the number of neurons in the next layer. It’s common to use numbers that are powers 
     of 2 for hidden layers for computational efficiency and memory. 512 is a common starting point, as 2^9=512.
+  
     🔧 [ReLU](https://www.datacamp.com/blog/rectified-linear-unit-relu), which stands for Rectified Linear Unit, is 
     not a layer itself. It is an activation function applied to the output of each layer. It allows the neural network to
-    model non-linear relationships in the data. 
+    model non-linear relationships in the data.
+  
   🔍 Create the forward method to carry out the neural network processes.
+  
     🔧 Use PyTorch’s 'transform' method to transform the input data into the flattened input layer.
+  
     🔧 Send the data through the neural network and assign the value to the variable logits. Logits are the name for the
     model’s raw “confidence score” for a specific output. A higher logit number represents a higher confidence by the model
     that the output belongs to a certain class. So, if the first logit score is the highest, the model is most confident that
@@ -100,16 +106,21 @@ the layers of the neural network.
 ## 4. Create the preprocessing and loading pipeline
 
 * Transform the data, as I discussed in the explore the data section.
+  
   🔍 I also normalize pixel values. Since this is image data, the value of each pixel is somewhere between 0-255. I
   want to scale those values so that instead of being between 0 and 255, they’re between 0-1.
+  
 * I loaded the dataset in almost the same way as I did in the “explore the data” section. However, since I transformed 
 the data differently than I did in the prior section, I ran this command again with the updated transform instructions.
+
 * Recall that there are 60,000 images in this dataset. Instead of trying to send them all through the neural network at once, 
 I should batch them using ‘DataLoader’ and send them to the neural network in groups of a manageable size.
+
   🔍 Additionally, the neural network is trained and updated upon each run. So the neural network will predict labels for
   64 images, compare the predictions to the true target labels, measure the difference between the prediction and the true
   label, and then average the differences between prediction and targets for all 64 data points in that batch. With that 
   information, the neural network can update its weights to produce better predictions for the next batch.
+  
   🔍 Outputs are a batch of 64 images in the same format - ‘(data, target)’.
 
 ![Create preprocessing/loading pipeline](/assets/nn-pipeline.jpg)
@@ -119,16 +130,23 @@ I should batch them using ‘DataLoader’ and send them to the neural network i
 * The strength of a GPU over a CPU is its ability to carry out parallel processing. They are useful for processing large 
 datasets more efficiently than CPUs. If you’re using Google Colab like me, the default processor is a CPU. But you can click
 the dropdown next to Runtime in the top right, then click “Change runtime type” to change the Runtime to “T4 GPU”.
-* Create a for loop to: 
+* Create a for loop to:
+  
   🔍 Separate the data from the labels for each data point in the batch.
+  
   🔍 Run the neural network and assign the output to the variable output.
+  
   🔍 Print the input shape and the output shape.
+  
     🔧 After using DataLoader and adding batches of size 64, PyTorch adds another dimension to the tensor. So the input
     shape is [batch_size, channels, image height in pixels, image width in pixels]. That’s why the input shape is now 
     [64, 1, 28, 28].
-    🔧 The output shape is [batch_size, number_of_output_neurons]. 
+  
+    🔧 The output shape is [batch_size, number_of_output_neurons].
+  
   🔍 Earlier, I mentioned how logits represent the model’s confidence in a particular output value. The softmax equation 
   transforms logit values to actual probabilities.
+  
   🔍 I would recommend putting a break statement after the last print statement the first time you run the code to make 
   sure it runs smoothly before trying to run all 60000 samples. 
 
