@@ -34,7 +34,7 @@ dataset and predicts the handwritten number present in each image.
 * ‘DataLoader’ handles batching for efficiency and memory management.
 * ‘Datasets’ gives access to built-in datasets like MNIST
 
-![Import libraries code](assets/nn-imports.jpg)
+![Import libraries code](/assets/nn-imports.jpg)
 
 ## 2. Explore the dataset
 
@@ -45,13 +45,13 @@ with PyTorch commands, convert the given dataset from whatever form it’s curre
 
 * There are 60,000 samples in the dataset. 
 
-![Size of dataset](assets/nn-explore-dataset-02.jpg)
+![Size of dataset](/assets/nn-explore-dataset-02.jpg)
 
 * Determine the format of data in the dataset. 
   🔍 Using the ‘type()’ command tells me that the first item in the dataset is a tuple. Most Pytorch datasets have data
   stored in a tuple with the pattern ‘(data, target)’. I see that it’s a tuple of length 2.
 
-![Format type of values in dataset](assets/nn-explore-dataset-03.jpg)
+![Format type of values in dataset](/assets/nn-explore-dataset-03.jpg)
 
   🔍 The ‘.shape’ attribute tells me the dimensions of the data. If the data is in the form ‘(data, target)’ and I know I'm
   looking for image data, I can expect the first value in the tuple to have multiple dimensions. I see that the shape of the
@@ -59,12 +59,12 @@ with PyTorch commands, convert the given dataset from whatever form it’s curre
   [number of channels, image height in pixels, image width in pixels]. That looks like image data! I originally printed the
   value of the first tuple, but it was a very, very long tensor, so I only included the shape in the final code. 
 
-![First value](assets/nn-explore-dataset-04.jpg)
+![First value](/assets/nn-explore-dataset-04.jpg)
 
   🔍 However, I did print the second tuple value. The target is the handwritten number represented by the image.
 
-![See the image](assets/nn-explore-dataset-05.jpg)
-![Image](assets/nn-explore-dataset-06.jpg)
+![See the image](/assets/nn-explore-dataset-05.jpg)
+![Image](/assets/nn-explore-dataset-06.jpg)
 
 
 ## 3. Create the neural network class 
@@ -94,7 +94,7 @@ the layers of the neural network.
     that the output belongs to a certain class. So, if the first logit score is the highest, the model is most confident that
     the digit in the image is a 0.
 
-![Create nn class](assets/nn-create-nn-class.jpg)
+![Create nn class](/assets/nn-create-nn-class.jpg)
 
 ## 4. Create the preprocessing and loading pipeline
 
@@ -111,7 +111,7 @@ I should batch them using ‘DataLoader’ and send them to the neural network i
   information, the neural network can update its weights to produce better predictions for the next batch.
   🔍 Outputs are a batch of 64 images in the same format - ‘(data, target)’.
 
-![Create preprocessing/loading pipeline](assets/nn-pipeline.jpg)
+![Create preprocessing/loading pipeline](/assets/nn-pipeline.jpg)
 
 ## 5. Run the neural network
 
@@ -131,7 +131,7 @@ the dropdown next to Runtime in the top right, then click “Change runtime type
   🔍 I would recommend putting a break statement after the last print statement the first time you run the code to make 
   sure it runs smoothly before trying to run all 60000 samples. 
 
-![Run neural network](assets/nn-run-nn.jpg)
+![Run neural network](/assets/nn-run-nn.jpg)
 
 After running the code block, look at the “Predicted digit for first image” vs “Actual digit for first image”. Are they 
 congruent? Mine aren’t. The model needs to be trained. This means that it needs to compare its predictions to the targets.
