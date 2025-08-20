@@ -30,7 +30,18 @@ You can follow along by watching both videos first, or just read through my expl
 dataset and predicts the handwritten number present in each image.
 
 ## 1. Import the necessary libraries
+
 * ‘DataLoader’ handles batching for efficiency and memory management.
 * ‘Datasets’ gives access to built-in datasets like MNIST
+
+## 2. Explore the dataset
+* The tensor is the fundamental data structure in Pytorch. They are analogous to arrays in numpy. Before moving forward 
+with PyTorch commands, convert the given dataset from whatever form it’s currently in into a tensor.
+* There are 60,000 samples in the dataset. 
+* Determine the format of data in the dataset. 
+  🔍 Using the ‘type()’ command tells me that the first item in the dataset is a tuple. Most Pytorch datasets have data
+  stored in a tuple with the pattern ‘(data, target)’. I see that it’s a tuple of length 2.
+
+
 
 
