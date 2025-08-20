@@ -1,0 +1,36 @@
+---
+layout: post
+title: How to build a neural network using PyTorch
+subtitle: A quick tutorial
+tags: [neural-network]
+---
+
+*August 19, 2025*
+
+Starting my second Kaggle competition, I noticed the tutorial provided by the competition hosts uses Pytorch to create 
+Long Short Term Memory (LSTM) and Graph Neural Network (GNN) models. Pytorch is an open-source framework that is used to 
+build and train deep learning models. (Alternative frameworks include TensorFlow or Keras). A neural network is basically a huge
+function that is loosely built on the concept of neurons in a brain. Each layer of neurons passes on information to the next
+layer of neurons. The neurons in each layer modify that information they receive based on parameters (specifically, weights and
+biases). Then, the neural network outputs a prediction. 
+
+I’ve never programmed a basic neural network, but this quick exercise will give me a better understanding 
+of how they work before trying to apply LSTMs and GNNs to a real world problem. It will also give me more familiarity
+with the PyTorch framework. 
+
+I watched the video [But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk&t=2s) from 3Blue1Brown 
+to get a more granular understanding of how neural networks work. Then, I watched 
+[Pytorch in 100 seconds](https://www.youtube.com/watch?v=ORMx45xqWkA) by Fireship, which explained Pytorch’s uses and gave
+a very quick explanation of how to build a neural network. Perfect combo!
+
+You can follow along by watching both videos first, or just read through my explanation below. My Colab notebook is 
+[HERE](https://colab.research.google.com/drive/13p1FF4Ih33jfyCi0UOrVjyIIXxwuTbDN?usp=sharing).
+
+**Objective**: Create a basic neural network that takes images from the famous [MNIST](https://en.wikipedia.org/wiki/MNIST_database)
+dataset and predicts the handwritten number present in each image.
+
+## 1. Import the necessary libraries
+* ‘DataLoader’ handles batching for efficiency and memory management.
+* ‘Datasets’ gives access to built-in datasets like MNIST
+
+
