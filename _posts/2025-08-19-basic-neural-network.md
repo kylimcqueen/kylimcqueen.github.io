@@ -11,7 +11,7 @@ Starting my second Kaggle competition, I noticed the tutorial provided by the co
 Long Short Term Memory (LSTM) and Graph Neural Network (GNN) models. Pytorch is an open-source framework that is used to 
 build and train deep learning models. (Alternative frameworks include TensorFlow or Keras). A neural network is basically a huge
 function that is loosely built on the concept of neurons in a brain. Each layer of neurons passes on information to the next
-layer of neurons. The neurons in each layer modify that information they receive based on parameters (specifically, weights and
+layer of neurons. The neurons in each layer modify the information they receive based on parameters (specifically, weights and
 biases). Then, the neural network outputs a prediction. 
 
 I’ve never programmed a basic neural network, but this quick exercise will give me a better understanding 
