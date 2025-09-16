@@ -3,6 +3,7 @@ layout: post
 title: A workflow for my second Kaggle competition
 subtitle: My plan to stay on track 
 tags: [kaggle]
+private: True
 ---
 
 
